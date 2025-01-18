@@ -1,1 +1,4 @@
+How to connect teamcenter database.
+How to login with auto login option.
+How to login with UserID,Password,Group using cmd.
 
