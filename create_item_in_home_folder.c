@@ -41,7 +41,8 @@ int ITK_user_main(int argc, char* argv[])
 		iFail = SA_find_user2(cUserID, &tUser);
 		printf("\n\n User find Success");
 		Report_Error(iFail);
-		
+
+		# We have to find home folder tag for login user.
 		iFail = SA_ask_user_home_folder(tUser, &tHomeFolder);
 		printf("\n\n User Home folder find Success");
 		Report_Error(iFail);
@@ -50,6 +51,7 @@ int ITK_user_main(int argc, char* argv[])
 		printf("\n\n Item inserted in User Home folder Success");
 		Report_Error(iFail);
 		
+		# We have done changes in Home folder so he have to save it.
 		iFail = AOM_save_without_extensions(tHomeFolder);
 		printf("\n\n Item save in Home Folder Success");
 		Report_Error(iFail);
