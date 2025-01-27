@@ -38,20 +38,22 @@ int ITK_user_main(int argc, char* argv[])
 		printf("\n Item Saved in Database");
 		Report_Error(iFail);
 		
+		// We have to find User tag.
 		iFail = SA_find_user2(cUserID, &tUser);
 		printf("\n\n User find Success");
 		Report_Error(iFail);
 
-		# We have to find home folder tag for login user.
+		// We have to find home folder tag for login user.
 		iFail = SA_ask_user_home_folder(tUser, &tHomeFolder);
 		printf("\n\n User Home folder find Success");
 		Report_Error(iFail);
-		
+
+		// Add item to home folder
 		iFail = FL_insert(tHomeFolder, tItem, 999);
 		printf("\n\n Item inserted in User Home folder Success");
 		Report_Error(iFail);
 		
-		# We have done changes in Home folder so he have to save it.
+		// We have done changes in Home folder so he have to save it.
 		iFail = AOM_save_without_extensions(tHomeFolder);
 		printf("\n\n Item save in Home Folder Success");
 		Report_Error(iFail);
