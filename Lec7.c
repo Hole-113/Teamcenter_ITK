@@ -1,3 +1,5 @@
+// To generate a report of secondary objects attached to the ItemRevision.
+
 #include"Header.h"
 int ITK_user_main(int argc, char* argv[])
 {
