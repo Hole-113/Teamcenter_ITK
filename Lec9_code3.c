@@ -45,7 +45,7 @@ int ITK_user_main(int argc, char* argv[])
 
 		for (int j = 0; j < iObjectCount; j++)
 		{
-			iFail = WSOM_ask_name2(tObjects[i], &cValue);
+			iFail = WSOM_ask_name2(tObjects[j], &cValue);
 			printf("\n\n %d Child is  %s", j + 1, cValue);
 		}
 	}
