@@ -1,3 +1,8 @@
+// Assign 3
+// To create ITEM with specified item_id & name
+
+// In this code Item is created but it save in database.
+
 #include"Header.h"
 int ITK_user_main(int argc, char* argv[])
 {
