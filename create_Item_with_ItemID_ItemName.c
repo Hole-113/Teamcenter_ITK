@@ -33,6 +33,7 @@ int ITK_user_main(int argc, char* argv[])
 			if (iFail == ITK_ok)
 			{
 				printf("\n Item Create Success");
+		                // In teamcenter UI if we create Item it automatically save but in ITK program we have to manually save the ITEM.		
 				iFail = ITEM_save_item(tItem);
 				if (iFail == ITK_ok)
 				{
