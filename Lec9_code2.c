@@ -13,7 +13,7 @@ int ITK_user_main(int argc, char* argv[])
 
 	tag_t* tSerachList = NULLTAG;
 	tag_t tUser = NULLTAG;
-	WSO_search_criteria_t tCriteria;
+	WSO_search_criteria_t tCriteria; // Declare structure variable
 
 	iFail = ITK_init_module("infodba", "infodba", "dba");
 	printf("\n\n Login Successful");
@@ -27,6 +27,7 @@ int ITK_user_main(int argc, char* argv[])
 	printf("\n\n User tag find success");
 	Report_Error(iFail);
 
+	// To copy string we have to use string copy
 	tc_strcpy(tCriteria.class_name, "Item");
 	tc_strcpy(tCriteria.name, "*");
 	tCriteria.owner = tUser;
