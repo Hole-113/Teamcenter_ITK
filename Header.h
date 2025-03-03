@@ -17,10 +17,6 @@ int Report_Error(int iFail)
 		MEM_free(cError);
 		exit(0);
 	}
-	if(cError)
-	{
-		MEM_free(cError);
-	}
 	return 0;
 }
 
