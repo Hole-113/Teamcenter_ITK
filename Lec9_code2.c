@@ -1,5 +1,6 @@
 // Assign 11
 // To search workspace object(Item)
+// In teamcenter whenever we want to search workspace object then we search through General.. (General search)
 
 #include "Header.h"
 
@@ -28,7 +29,8 @@ int ITK_user_main(int argc, char* argv[])
 	Report_Error(iFail);
 
 	// To copy string we have to use string copy
-	tc_strcpy(tCriteria.class_name, "Item");
+	// Whenever we are working with string we can not use = operator that's why we use tc_strcpy function
+	tc_strcpy(tCriteria.class_name, "Item"); // kis type ka business object find krna hai
 	tc_strcpy(tCriteria.name, "*");
 	tCriteria.owner = tUser;
 
