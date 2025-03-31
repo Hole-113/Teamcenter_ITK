@@ -39,7 +39,7 @@ int ITK_user_main(int argc, char* argv[])
 	{
 		WSOM_ask_name2(tSerachList[i], &cFolderName);
 		printf("\n\n Name of Searched folder is %s", cFolderName);
-
+		// FL_fsc_by_name means sort by name 
 		iFail = FL_ask_references(tSerachList[i], FL_fsc_by_name, &iObjectCount, &tObjects);
 		Report_Error(iFail);
 
