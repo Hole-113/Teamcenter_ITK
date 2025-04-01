@@ -14,7 +14,7 @@ int ITK_user_main(int argc, char* argv[])
 
 	tag_t* tSerachList = NULLTAG;
 	tag_t tUser = NULLTAG;
-	WSO_search_criteria_t tCriteria; // Declare structure variable
+	WSO_search_criteria_t tCriteria; // create a structure variable of WSO_search_criteria_t called tCriteria
 
 	iFail = ITK_init_module("infodba", "infodba", "dba");
 	printf("\n\n Login Successful");
