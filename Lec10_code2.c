@@ -20,12 +20,14 @@ int ITK_user_main(int argc, char* argv[])
 	printf("\n\n Login Successful");
 	Report_Error(iFail);
 
+	// Find out the query tag by passing query name.
 	iFail = QRY_find2("Item Name", &tQuery);
 	printf("\n\n Query find Successfuly");
 	Report_Error(iFail);
 
 	if (tQuery != NULL)
 	{
+		// we get the query entries and there default values.
 		iFail = QRY_find_user_entries(tQuery, &iEntriesCount, &cEntries, &cValues);
 
 		if (cEntries != NULL)
@@ -36,6 +38,7 @@ int ITK_user_main(int argc, char* argv[])
 			{
 				if (tc_strcmp(cEntries[j], "Item Name") == 0)
 				{
+					// updating the default values
 					tc_strcpy(cValues[j], "*");
 
 					iFail = QRY_execute(tQuery, iEntriesCount, cEntries, cValues, &iItemFound, &tResults);
