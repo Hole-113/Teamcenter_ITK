@@ -1,6 +1,9 @@
 // Assign 11
 // To search workspace object(Item)
 // In teamcenter whenever we want to search workspace object then we search through General.. (General search)
+/* Q) We can do same work from teamcenter using General.. or creating custom query in query builder..?
+==> Yes we can perform same work from teamcenter using General.. or creating custom query in query builder but in this case we get
+output in Teamcenter UI but we want report in csv format that's why we use batch utility*/
 
 #include "Header.h"
 
